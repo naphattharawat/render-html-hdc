@@ -154,7 +154,7 @@ export class AppComponent {
 
           // name: c.name,
           // type: c.type,
-          c.type_check = ['HTML','TABLE','COLUMN_CHART', 'LINE_CHART', 'BAR_CHART', 'BAR_NEGATIVE_CHART', 'GAUGE_CHART', 'DONUT_CHART', 'PIE_CHART'].indexOf(c.type) > -1 ? '/' : 'X',
+          c.type_check = ['HTML','MAP','COLUMN_GROUP_CHART','TABLE','COLUMN_CHART', 'LINE_CHART', 'BAR_CHART', 'BAR_NEGATIVE_CHART', 'GAUGE_CHART', 'DONUT_CHART', 'PIE_CHART'].indexOf(c.type) > -1 ? '/' : 'X',
             // column_size: c.column_size
 
             idx++
@@ -188,7 +188,7 @@ export class AppComponent {
           "serie_data": c.serie_data,
           "serie_data_check": c.serie_data == null ? '/' : 'X',
           "type": c.type,
-          "type_check": ['COLUMN', 'LINE', 'BAR', 'BAR_NEGATIVE', 'GAUGE', 'DONUT', 'PIE'].indexOf(c.type) > -1 ? '/' : 'X',
+          "type_check": ['COLUMN','MAP','COLUMN_GROUP', 'LINE', 'BAR', 'BAR_NEGATIVE', 'GAUGE', 'DONUT', 'PIE'].indexOf(c.type) > -1 ? '/' : 'X',
           "digit_number": c.digit_number,
           "digit_number_check": !isNaN(c.digit_number) ? '/' : 'X',
           "target_chart": c.target_chart,

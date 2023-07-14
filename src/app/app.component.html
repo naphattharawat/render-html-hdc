@@ -24,7 +24,7 @@
   <div class="col-6">
     <div class="row">
       <div class="col-12">
-        <h4>Chart (COLUMN,LINE,BAR,BAR_NEGATIVE,GAUGE,DONUT,PIE)</h4>
+        <h4>Chart (MAP,COLUMN,COLUMN_GROUP,LINE,BAR,BAR_NEGATIVE,GAUGE,DONUT,PIE)</h4>
         <textarea name="chart" [(ngModel)]="chart" rows="10" style="width: 100%;"></textarea>
       </div>
       <div class="col-12">
@@ -66,7 +66,7 @@
             <tr>
               <td>Chart</td>
               <td>
-                {{['COLUMN','LINE','BAR','BAR_NEGATIVE','GAUGE','DONUT','PIE'].indexOf(c.type)>-1 ? c.type : 'CHART  NOT  FOUND'}}
+                {{['COLUMN','MAP','COLUMN_GROUP','LINE','BAR','BAR_NEGATIVE','GAUGE','DONUT','PIE'].indexOf(c.type)>-1 ? c.type : 'CHART  NOT  FOUND'}}
               </td>
               <td>{{c.type_check}}</td>
             </tr>
@@ -90,7 +90,7 @@
   <div class="col-12">
     <div class="row">
       <div class="col-12">
-        <h4>Layout ('HTML','TABLE','COLUMN_CHART', 'LINE_CHART', 'BAR_CHART', 'BAR_NEGATIVE_CHART', 'GAUGE_CHART', 'DONUT_CHART', 'PIE_CHART')</h4>
+        <h4>Layout ('HTML','TABLE','MAP','COLUMN_CHART','COLUMN_GROUP_CHART', 'LINE_CHART', 'BAR_CHART', 'BAR_NEGATIVE_CHART', 'GAUGE_CHART', 'DONUT_CHART', 'PIE_CHART')</h4>
         <textarea name="layout" [(ngModel)]="layout" cols="30" rows="10" style="width:100%"></textarea>
       </div>
       <div class="col-12">
