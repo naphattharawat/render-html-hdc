@@ -7,6 +7,7 @@
       </div>
       <div class="col-12">
         <button (click)="onChangeTable($event)">Generate</button>
+        <button (click)="tableHtml=''">Clear</button>
       </div>
       <div class="col-12">
         <table style="border: 1px solid black;" id="dataTable" class="table table-striped table-bordered nowrap"
@@ -29,6 +30,7 @@
       </div>
       <div class="col-12">
         <button (click)="onChangeChart($event)">Generate</button>
+        <button (click)="chartHtml=''">Clear</button>
       </div>
       <div class="col-12">
         <div *ngFor="let c of chartHtml;let idx =index">
@@ -95,6 +97,7 @@
       </div>
       <div class="col-12">
         <button (click)="onChangeLayout($event)">Generate</button>
+        <button (click)="layoutHtml=''">Clear</button>
       </div>
       <div class="col-12">
         <div class="row" *ngFor="let h of layoutHtml">
