@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   select = 'pselectarea.php';
   error: any = [];
   seletype = [
-    { "name": "pselectarea.php", "value": "{{S_TABLE}}|{{YEAR}}|{{YYMMFREEZE}}|{{ZONE_CODE}}|{{PROVINCE_CODE}}|{{DISTRICT|{{SUBDISTRICT|{{SERVICE_PLAN_CODE}}|{{ORGANIZATION_TYPE}}|{{DEPARTMENT_CODE}}|{{HOSPITAL_CODE}}|{{MONTH}}|{{MINISTRY_CODE}}" },
+    { "name": "pselectarea.php", "value": "{{S_TABLE}}|{{YEAR}}|{{YYMMFREEZE}}|{{ZONE_CODE}}|{{PROVINCE_CODE}}|{{DISTRICT|{{SUBDISTRICT|{{SERVICE_PLAN_CODE}}|{{ORGANIZATION_TYPE}}|{{DEPARTMENT_CODE}}|{{HOSPITAL_CODE}}|{{MINISTRY_CODE}}" },
     { "name": "aselectarea.php", "value": "" },
     { "name": "bstselectarea.php", "value": "" },
     { "name": "fselectarea.php", "value": "" },
