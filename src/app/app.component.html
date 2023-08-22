@@ -7,11 +7,12 @@
   <div class="col-md-3">
     report_id : <input type="text" name="reportId" (keyup)="convert()" [(ngModel)]="reportId">
   </div>
-  <div class="col-md-12">
-    <textarea name="query" [(ngModel)]="query" rows="10" (keyup)="convert()" style="width: 100%;"></textarea>
+  <div class="col-md-12" [formGroup]="formulario1">
+    <textarea name="query" formControlName="script" [(ngModel)]="query" rows="10" (keyup)="convert()" style="width: 100%;"></textarea>
+    <button (click)="formatar1()">Formatar</button>
   </div>
-  <div class="col-md-12">
-    <textarea name="sql" [(ngModel)]="sql" rows="10" style="width: 100%;"></textarea>
+  <div class="col-md-12" [formGroup]="formulario2">
+    <textarea name="sql" formControlName="script" [(ngModel)]="sql" rows="10" style="width: 100%;"></textarea>
   </div>
   <div class="col-md-12">
     <p *ngFor="let e of error">{{e}}</p>

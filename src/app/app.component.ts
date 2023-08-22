@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
-import { format } from 'sql-formatter';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { format } from 'sql-formatter';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +9,15 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  formulario?: FormGroup;
+  formulario1: any;
+  formulario2: any;
+
   constructor(private formBuilder: FormBuilder) { }
   ngOnInit(): void {
-    this.formulario = this.formBuilder.group({
-      script: '',
-    });
+    this.initForm();
   }
   query = '';
+  query2 = '';
   reportId: any;
   select = 'pselectarea.php';
   error: any = [];
@@ -1499,6 +1500,7 @@ export class AppComponent implements OnInit {
     this.sql = q;
 
   }
+
   check() {
     this.error = [];
     let freez;
@@ -1508,7 +1510,7 @@ export class AppComponent implements OnInit {
         const f = _.indexOf(this.kpi, this.reports[idx].code);
         if (f > -1) {
           freez = true;
-        }else{
+        } else {
           freez = false;
         }
       }
@@ -1525,5 +1527,44 @@ export class AppComponent implements OnInit {
       }
 
     }
+  }
+
+  initForm() {
+    this.formulario1 = this.formBuilder.group({
+      script: 'mysql'
+    });
+    this.formulario2 = this.formBuilder.group({
+      script: 'mysql',
+    });
+  }
+  formatar1() {
+    let q = this.query;
+    q = q.replaceAll(
+      '{{',
+      'xxxxx'
+    );
+    q = q.replaceAll(
+      '}}',
+      'yyyyy'
+    );
+    let f = format(q);
+    f = f.replaceAll(
+      'xxxxx',
+      '{{',
+    );
+    f = f.replaceAll(
+      'yyyyy',
+      '}}',
+      );
+    this.formulario1.setValue({
+      script: f,
+    });
+    this.query = f;
+    this.convert();
+  }
+  formatar2() {
+    this.formulario2.setValue({
+      script: format(this.formulario2.value.script),
+    });
   }
 }
