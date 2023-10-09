@@ -1019,6 +1019,7 @@ export class AppComponent implements OnInit {
   { "code": "8d86056bc913b15601ce9bb14be67c8c", "id": 1065, "sname": "s_r506_mental14" },
   { "code": "131da085ee54fcbaa8c94f2109346214", "id": 1066, "sname": "s_kpi_stemi" }];
   sql: any = '';
+  
   kpi = ['00366a85bd3c2b6932a228df29137252',
     '009b430cc231e1b1635963a899eca673',
     '023dcdc36f90b6b070358fbc6727c768',
