@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
     { "name": "pselectarea3.php", "value": "{{S_TABLE}}|{{YEAR}}|{{YYMMFREEZE}}|{{ZONE_CODE}}|{{PROVINCE_CODE}}|{{ORGANIZATION_TYPE}}|{{MENTAL_CODE}}|{{MENTAL_GROUP_CODE}}" },
     { "name": "pselectarea_month.php", "value": "{{S_TABLE}}|{{YEAR}}|{{YYMMFREEZE}}|{{ZONE_CODE}}|{{PROVINCE_CODE}}|{{MONTH}}|{{SERVICE_PLAN_CODE}}|{{ORGANIZATION_TYPE}}|{{DEPARTMENT_CODE}}" },
     { "name": "pselectarea_prov_map.php", "value": "{{S_TABLE}}|{{YEAR}}|{{YYMMFREEZE}}|{{ZONE_CODE}}" },
-    { "name": "schoolselect.php", "value": "{{S_TABLE}}|{{YEAR}}|{{YYMMFREEZE}}|{{ZONE_CODE}}" },
+    { "name": "schoolselect.php", "value": "{{S_TABLE}}|{{YEAR}}|{{YYMMFREEZE}}|{{ZONE_CODE}}ฅ{{PROVINCE_CODE}}|{{DISTRICT|{{JURISDICTION_CODE}}" },
     { "name": "selectarea.php", "value": "{{S_TABLE}}|{{YEAR}}|{{YYMMFREEZE}}|{{ZONE_CODE}}|{{PROVINCE_CODE}}|{{MINISTRY_CODE}}" },
     { "name": "selectarea_p.php", "value": "{{S_TABLE}}|{{YEAR}}|{{YYMMFREEZE}}|{{ZONE_CODE}}|{{PROVINCE_CODE}}|{{DISTRICT|{{SUBDISTRICT|{{SERVICE_PLAN_CODE}}|{{ORGANIZATION_TYPE}}|{{DEPARTMENT_CODE}}|{{HOSPITAL_CODE}}|{{MINISTRY_CODE}}" }
   ]
